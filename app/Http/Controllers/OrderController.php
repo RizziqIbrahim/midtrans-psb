@@ -64,6 +64,7 @@ class OrderController extends Controller
                 'nomor' => $request->nomor,
             ]);
             $this->_generatePaymentToken($order);
+            return redirect("payments/". $order->id);
         }
     }
 
