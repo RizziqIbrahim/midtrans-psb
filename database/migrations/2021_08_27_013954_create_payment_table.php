@@ -16,10 +16,7 @@ class CreatePaymentTable extends Migration
         Schema::create('payment', function (Blueprint $table) {
             $table->id();
             $table->foreignId('order_id');
-            // 0 = belum dibayar
-            // 1 = dibayar
-            // 2 = gagal
-            $table->integer('status')->nullable()->default('0');;
+            $table->integer('status')->nullable();
             $table->timestamps();
         });
     }

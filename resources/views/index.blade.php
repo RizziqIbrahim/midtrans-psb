@@ -47,13 +47,7 @@
                         <td>{{$item->category->nama_category}}</td>
                         <td>Rp.{{$item->jumlah}}</td>
                         <td>
-                          @if ($item->status == 0)
-                              belum dibayar
-                          @elseif($item->status == 1)
-                              dibayar
-                          @elseif($item->status == 2)
-                              failed
-                          @endif
+                          {{$item->status}}
                         </td>
                       </tr>
                     @endforeach
